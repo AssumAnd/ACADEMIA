@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abre isso</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h1>vou pra academia hoje? </h1>
+
+            <button class="btn" onclick="sim()">nao :D </button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">sim. voce vai</button>
+        </div>
+    </div>
+</body>
+<style>
+    #conteudo {
+        background: #ffffff;
+     
+    
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+        padding-top: 50PX;
+    }
+
+    .btn {
+        
+        margin: auto;
+        background: black;
+        color: white;
+        border: none;
+        padding: 20px;
+        width: 80px;
+        border-radius: 10px;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("OBRIGADO. A casa agradece. Vasco da Gama");
+    }
+
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
